@@ -47,7 +47,7 @@
   const params = new URLSearchParams(window.location.search);
   const bookId = params.get("id") || 1;
 
-  const link = `uc365://book/${bookId}`;
+  const link = `uc365://(book)/${bookId}`;
 
   document.getElementById("openLink").href = link;
 </script>
