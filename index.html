@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Link UC365</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      background:#f5f5f5;
+    }
+
+    .box{
+      background:white;
+      padding:30px;
+      border-radius:10px;
+      text-align:center;
+      box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    a{
+      display:inline-block;
+      margin-top:15px;
+      padding:10px 20px;
+      background:#4CAF50;
+      color:white;
+      text-decoration:none;
+      border-radius:5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Test mở sách UC365</h2>
+  <p>Click để mở app:</p>
+
+  <a id="openLink">Mở sách</a>
+</div>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const bookId = params.get("id") || 1;
+
+  const link = `uc365://book/${bookId}`;
+
+  document.getElementById("openLink").href = link;
+</script>
+
+</body>
+</html>
